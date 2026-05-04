@@ -1,0 +1,111 @@
+Experiment 3: Simulating the Control Unit
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+    int register1;
+    int register2;
+    int program_counter;
+} CPU;
+
+
+void fetchDecodeExecute(CPU *cpu, char *instruction) {
+    int operand1, operand2;
+    char operation;
+ 
+    // ── DECODE ───────────────────────────────────────────────
+    // sscanf reads the instruction string and fills our variables
+    sscanf(instruction, "%c %d %d", &operation, &operand1, &operand2);
+ 
+    // ── EXECUTE ──────────────────────────────────────────────
+    switch (operation) {
+        case 'a':  // addition
+            cpu->register1 = operand1 + operand2;
+            break;
+        case 's':  // subtraction
+            cpu->register1 = operand1 - operand2;
+            break;
+        case 'm':  // multiplication
+            cpu->register1 = operand1 * operand2;
+            break;
+        default:
+            printf("Unknown operation: %c\n", operation);
+            return;
+    }
+ 
+    cpu->program_counter++;
+}
+
+int main()
+{
+    CPU cpu = {0};  // zero-initialise all fields
+    char instruction[20];
+ 
+    // ── FETCH loop ───────────────────────────────────────────
+    while (1) {
+        printf("Enter instruction (e.g., a 10 5) or 'exit': ");
+        fgets(instruction, 20, stdin);
+ 
+        if (strncmp(instruction, "exit", 4) == 0) break;
+ 
+        fetchDecodeExecute(&cpu, instruction);
+ 
+        printf("  Result → register1: %d  |  PC: %d\n\n",
+               cpu.register1, cpu.program_counter);
+    }
+ 
+    return 0;
+
+}
+Experiment 4: Simulating a simple data bus
+#include <stdio.h>
+ 
+#define MEMORY_SIZE 10
+ 
+int memory[MEMORY_SIZE];   // simulated RAM — 10 slots
+int register1;             // single CPU register
+ 
+// LOAD — transfers data from memory into the register
+void memoryToRegister(int address) {
+    if (address >= 0 && address < MEMORY_SIZE) {
+        register1 = memory[address];
+        printf("LOAD: memory[%d]=%d  →  register1\n", address, register1);
+    } else {
+        printf("ERROR: Invalid address %d\n", address);
+    }
+}
+ 
+// STORE — transfers data from the register back to memory
+void registerToMemory(int address) {
+    if (address >= 0 && address < MEMORY_SIZE) {
+        memory[address] = register1;
+        printf("STORE: register1=%d  →  memory[%d]\n", register1, address);
+} else {
+        printf("ERROR: Invalid address %d\n", address);
+    }
+}
+ 
+void initializeMemory() {
+    for (int i = 0; i < MEMORY_SIZE; i++)
+        memory[i] = i * 10;  // memory: 0, 10, 20, 30 ...
+}
+ 
+int main() {
+    initializeMemory();
+ 
+    printf("Initial memory state:\n");
+    for (int i = 0; i < MEMORY_SIZE; i++)
+        printf("  memory[%d] = %d\n", i, memory[i]);
+    printf("\n");
+ 
+    memoryToRegister(2);   // LOAD: bring memory[2] into register
+    register1 += 50;       // CPU computes: register1 = 20 + 50 = 70
+    registerToMemory(5);   // STORE: write 70 to memory[5]
+ 
+    printf("\nUpdated memory state:\n");
+    for (int i = 0; i < MEMORY_SIZE; i++)
+        printf("  memory[%d] = %d\n", i, memory[i]);
+ 
+    return 0;
+}
