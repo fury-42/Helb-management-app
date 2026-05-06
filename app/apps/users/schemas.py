@@ -29,5 +29,15 @@ class SemesterMinimalResponse(BaseModel):
     class Config:
         from_attributes = True
 
+class LoanMinimalResponse(BaseModel):
+    id: int
+    amount: float
+    status: str
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
+
 class UserWithSemestersResponse(UserResponse):
     semesters: list[SemesterMinimalResponse] = []
+    loans: list[LoanMinimalResponse] = []

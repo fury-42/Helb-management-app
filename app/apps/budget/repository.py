@@ -30,3 +30,9 @@ class BudgetRepository:
         db.commit()
         db.refresh(allocation)
         return allocation
+
+    def increment_spent_amount(self, db: Session, allocation: BudgetAllocation, amount: float) -> BudgetAllocation:
+        allocation.spent_amount += amount
+        db.commit()
+        db.refresh(allocation)
+        return allocation

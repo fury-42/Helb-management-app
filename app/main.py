@@ -3,9 +3,7 @@ from fastapi.responses import JSONResponse
 from app.core.settings import settings
 from app.shared.exceptions import AppException, app_exception_handler
 from app.core.logging_config import setup_logging
-from app.core.rate_limiter import limiter
-from slowapi.errors import RateLimitExceeded
-from slowapi import _rate_limit_exceeded_handler
+from app.core.rate_limiter import init_rate_limiting
 import time
 
 # Initialize logging
@@ -15,8 +13,7 @@ def create_app() -> FastAPI:
     app = FastAPI(title=settings.APP_NAME, debug=settings.DEBUG)
 
     # Register rate limiter
-    app.state.limiter = limiter
-    app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+    init_rate_limiting(app)
 
     # Register global exception handlers
     app.add_exception_handler(AppException, app_exception_handler)
@@ -54,6 +51,7 @@ def create_app() -> FastAPI:
     from app.apps.emergency.routes import router as emergency_router
     from app.apps.debts.routes import router as debts_router
     from app.apps.payments.routes import router as payments_router
+    from app.apps.loans.routes import router as loans_router
     
     app.include_router(users_router)
     app.include_router(auth_router)
@@ -63,6 +61,7 @@ def create_app() -> FastAPI:
     app.include_router(emergency_router)
     app.include_router(debts_router)
     app.include_router(payments_router)
+    app.include_router(loans_router)
     
     return app
 

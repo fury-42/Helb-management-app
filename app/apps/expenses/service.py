@@ -32,8 +32,7 @@ class ExpenseService:
         # 3. Update Budget Allocation spent amount if it exists
         allocation = self.budget_repo.get_allocation_by_category(db, semester.id, data.category)
         if allocation:
-            allocation.spent_amount += data.amount
-            db.commit()
+            self.budget_repo.increment_spent_amount(db, allocation, data.amount)
 
         return expense
 

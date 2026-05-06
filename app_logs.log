@@ -16,3 +16,91 @@
 2026-05-04 18:49:39.017 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
 2026-05-04 18:49:39.018 | INFO     | logging:callHandlers:1737 - Application startup complete.
 2026-05-04 18:49:39.019 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-05-04 20:25:06.050 | INFO     | logging:callHandlers:1737 - Started server process [6419]
+2026-05-04 20:25:06.051 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-04 20:25:06.052 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-04 20:25:06.054 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-05-04 20:25:18.915 | WARNING  | app.shared.exceptions:app_exception_handler:12 - AppException: Incorrect email or password (Status: 401)
+2026-05-04 20:25:18.917 | INFO     | app.main:log_requests:40 - Method: POST Path: /auth/login Status: 401 Duration: 159.57ms
+2026-05-04 20:25:18.917 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39536 - "POST /auth/login HTTP/1.1" 401
+2026-05-04 20:25:18.947 | WARNING  | app.shared.exceptions:app_exception_handler:12 - AppException: Incorrect email or password (Status: 401)
+2026-05-04 20:25:18.948 | INFO     | app.main:log_requests:40 - Method: POST Path: /auth/login Status: 401 Duration: 13.78ms
+2026-05-04 20:25:18.948 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39548 - "POST /auth/login HTTP/1.1" 401
+2026-05-04 20:25:18.975 | WARNING  | app.shared.exceptions:app_exception_handler:12 - AppException: Incorrect email or password (Status: 401)
+2026-05-04 20:25:18.977 | INFO     | app.main:log_requests:40 - Method: POST Path: /auth/login Status: 401 Duration: 13.99ms
+2026-05-04 20:25:18.978 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39562 - "POST /auth/login HTTP/1.1" 401
+2026-05-04 20:25:19.001 | WARNING  | logging:callHandlers:1737 - ratelimit 3 per 1 minute (127.0.0.1) exceeded at endpoint: /auth/login
+2026-05-04 20:25:19.004 | INFO     | app.main:log_requests:40 - Method: POST Path: /auth/login Status: 429 Duration: 10.30ms
+2026-05-04 20:25:19.005 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39578 - "POST /auth/login HTTP/1.1" 429
+2026-05-04 20:25:19.028 | WARNING  | logging:callHandlers:1737 - ratelimit 3 per 1 minute (127.0.0.1) exceeded at endpoint: /auth/login
+2026-05-04 20:25:19.031 | INFO     | app.main:log_requests:40 - Method: POST Path: /auth/login Status: 429 Duration: 9.61ms
+2026-05-04 20:25:19.031 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39592 - "POST /auth/login HTTP/1.1" 429
+2026-05-04 20:26:30.588 | INFO     | logging:callHandlers:1737 - Started server process [6496]
+2026-05-04 20:26:30.588 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-04 20:26:30.589 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-04 20:26:30.592 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-05-04 20:26:43.804 | WARNING  | app.shared.exceptions:app_exception_handler:12 - AppException: Incorrect email or password (Status: 401)
+2026-05-04 20:26:43.805 | INFO     | app.main:log_requests:27 - Method: POST Path: /auth/login Status: 401 Duration: 80.20ms
+2026-05-04 20:26:43.806 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54520 - "POST /auth/login HTTP/1.1" 401
+2026-05-04 20:26:43.835 | WARNING  | app.shared.exceptions:app_exception_handler:12 - AppException: Incorrect email or password (Status: 401)
+2026-05-04 20:26:43.836 | INFO     | app.main:log_requests:27 - Method: POST Path: /auth/login Status: 401 Duration: 13.40ms
+2026-05-04 20:26:43.837 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54522 - "POST /auth/login HTTP/1.1" 401
+2026-05-04 20:26:43.865 | WARNING  | app.shared.exceptions:app_exception_handler:12 - AppException: Incorrect email or password (Status: 401)
+2026-05-04 20:26:43.867 | INFO     | app.main:log_requests:27 - Method: POST Path: /auth/login Status: 401 Duration: 12.15ms
+2026-05-04 20:26:43.867 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54530 - "POST /auth/login HTTP/1.1" 401
+2026-05-04 20:26:43.892 | WARNING  | logging:callHandlers:1737 - ratelimit 3 per 1 minute (127.0.0.1) exceeded at endpoint: /auth/login
+2026-05-04 20:26:43.894 | INFO     | app.main:log_requests:27 - Method: POST Path: /auth/login Status: 429 Duration: 10.70ms
+2026-05-04 20:26:43.894 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54546 - "POST /auth/login HTTP/1.1" 429
+2026-05-04 20:26:43.918 | WARNING  | logging:callHandlers:1737 - ratelimit 3 per 1 minute (127.0.0.1) exceeded at endpoint: /auth/login
+2026-05-04 20:26:43.920 | INFO     | app.main:log_requests:27 - Method: POST Path: /auth/login Status: 429 Duration: 9.24ms
+2026-05-04 20:26:43.921 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54560 - "POST /auth/login HTTP/1.1" 429
+2026-05-05 19:29:13.595 | INFO     | logging:callHandlers:1737 - Started server process [17091]
+2026-05-05 19:29:13.595 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-05 19:29:13.596 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-05 19:29:13.596 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-05-06 18:38:33.193 | INFO     | logging:callHandlers:1737 - Started server process [33964]
+2026-05-06 18:38:33.193 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 18:38:33.194 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 18:49:54.782 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 18:49:56.118 | INFO     | logging:callHandlers:1737 - Started server process [34211]
+2026-05-06 18:49:56.119 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 18:49:56.119 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 18:50:02.142 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 18:50:03.179 | INFO     | logging:callHandlers:1737 - Started server process [34273]
+2026-05-06 18:50:03.179 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 18:50:03.180 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 18:51:05.752 | INFO     | logging:callHandlers:1737 - Started server process [34301]
+2026-05-06 18:51:05.752 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 18:51:05.753 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 18:53:28.085 | INFO     | app.main:log_requests:27 - Method: GET Path: / Status: 200 Duration: 8.14ms
+2026-05-06 18:53:28.086 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60146 - "GET / HTTP/1.1" 200
+2026-05-06 18:53:28.129 | INFO     | app.main:log_requests:27 - Method: GET Path: /favicon.ico Status: 404 Duration: 0.41ms
+2026-05-06 18:53:28.129 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60146 - "GET /favicon.ico HTTP/1.1" 404
+2026-05-06 18:53:44.965 | INFO     | app.main:log_requests:27 - Method: GET Path: /docs Status: 200 Duration: 0.55ms
+2026-05-06 18:53:44.966 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60154 - "GET /docs HTTP/1.1" 200
+2026-05-06 18:53:46.734 | INFO     | app.main:log_requests:27 - Method: GET Path: /openapi.json Status: 200 Duration: 82.05ms
+2026-05-06 18:53:46.734 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60154 - "GET /openapi.json HTTP/1.1" 200
+2026-05-06 19:07:21.840 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 19:07:22.829 | INFO     | logging:callHandlers:1737 - Started server process [35150]
+2026-05-06 19:07:22.830 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 19:07:22.830 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 19:07:29.253 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 19:07:29.354 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-05-06 19:07:29.355 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-05-06 19:07:29.356 | INFO     | logging:callHandlers:1737 - Finished server process [35150]
+2026-05-06 19:07:30.259 | INFO     | logging:callHandlers:1737 - Started server process [35160]
+2026-05-06 19:07:30.259 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 19:07:30.259 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 19:07:38.486 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 19:07:39.439 | INFO     | logging:callHandlers:1737 - Started server process [35171]
+2026-05-06 19:07:39.440 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 19:07:39.440 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 19:07:45.860 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 19:07:46.947 | INFO     | logging:callHandlers:1737 - Started server process [35183]
+2026-05-06 19:07:46.948 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 19:07:46.948 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-06 20:37:26.118 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-06 20:37:26.289 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-05-06 20:37:27.178 | INFO     | logging:callHandlers:1737 - Started server process [40394]
+2026-05-06 20:37:27.179 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-06 20:37:27.179 | INFO     | logging:callHandlers:1737 - Application startup complete.

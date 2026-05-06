@@ -5,14 +5,16 @@ from .providers import get_semester_service
 from app.core.database import get_db
 from app.core.security import get_current_student
 from app.apps.users.models import User
-from app.core.rate_limiter import limiter
+from app.core.rate_limiter import limiter, POST_LIMIT
 from fastapi import Request
 from app.shared.idempotency import check_idempotency
 
 router = APIRouter(prefix="/semester", tags=["Semester"])
 
 @router.post("/setup", response_model=SemesterStatus)
+@limiter.limit(POST_LIMIT)
 def setup_semester(
+    request: Request,
     data: SemesterSetup,
     background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),

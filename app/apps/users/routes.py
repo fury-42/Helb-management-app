@@ -1,14 +1,17 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from sqlalchemy.orm import Session
 from .schemas import UserCreate, UserResponse, UserWithSemestersResponse
 from .providers import get_user_service
 from app.core.database import get_db
 from app.core.security import get_current_admin
+from app.core.rate_limiter import limiter, POST_LIMIT
 
 router = APIRouter(prefix="/users", tags=["Users"])
 
 @router.post("/register", response_model=UserResponse)
+@limiter.limit(POST_LIMIT)
 def register(
+    request: Request,
     data: UserCreate,
     db: Session = Depends(get_db),
     service = Depends(get_user_service)

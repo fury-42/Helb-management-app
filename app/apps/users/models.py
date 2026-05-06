@@ -16,3 +16,4 @@ class User(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
     
     semesters = relationship("Semester", back_populates="user")
+    loans = relationship("Loan", back_populates="user")

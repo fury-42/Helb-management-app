@@ -19,5 +19,8 @@ class UserRepository:
         return user
 
     def get_all_with_semesters(self, db: Session):
-        """Fetches all users and their semesters in a single JOIN query."""
-        return db.query(User).options(joinedload(User.semesters)).all()
+        """Fetches all users, their semesters, and their loans in a single efficient query."""
+        return db.query(User).options(
+            joinedload(User.semesters),
+            joinedload(User.loans)
+        ).all()

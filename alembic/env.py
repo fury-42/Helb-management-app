@@ -31,6 +31,7 @@ import app.apps.expenses.models
 import app.apps.emergency.models
 import app.apps.debts.models
 import app.apps.payments.models
+import app.apps.loans.models
 
 target_metadata = Base.metadata
 
