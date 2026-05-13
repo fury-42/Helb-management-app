@@ -2,6 +2,7 @@ from app.core.database import SessionLocal, Base, engine
 from app.apps.users.repository import UserRepository
 from app.apps.users.models import User
 from app.apps.semester.models import Semester
+from app.core import models # Fix mapper initialization issues
 import uuid
 
 def test_user_creation_with_phone():

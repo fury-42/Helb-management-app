@@ -104,3 +104,68 @@
 2026-05-06 20:37:27.178 | INFO     | logging:callHandlers:1737 - Started server process [40394]
 2026-05-06 20:37:27.179 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
 2026-05-06 20:37:27.179 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-07 12:05:34.678 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-05-07 12:05:34.890 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-05-08 20:08:55.504 | INFO     | logging:callHandlers:1737 - Started server process [12613]
+2026-05-08 20:08:55.506 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-08 20:08:55.507 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-08 20:09:12.897 | INFO     | app.main:log_requests:27 - Method: GET Path: / Status: 200 Duration: 6.41ms
+2026-05-08 20:09:12.901 | INFO     | logging:callHandlers:1737 - 127.0.0.1:34536 - "GET / HTTP/1.1" 200
+2026-05-08 20:10:06.845 | INFO     | app.main:log_requests:27 - Method: GET Path: /users/ Status: 404 Duration: 5.38ms
+2026-05-08 20:10:06.855 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53534 - "GET /users/ HTTP/1.1" 404
+2026-05-08 20:16:37.596 | INFO     | logging:callHandlers:1737 - Started server process [13113]
+2026-05-08 20:16:37.597 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-08 20:16:37.598 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-08 20:16:40.676 | INFO     | app.main:log_requests:28 - Method: GET Path: / Status: 200 Duration: 2.68ms
+2026-05-08 20:16:40.676 | INFO     | logging:callHandlers:1737 - 127.0.0.1:44488 - "GET / HTTP/1.1" 200
+2026-05-08 20:19:41.831 | INFO     | logging:callHandlers:1737 - Started server process [13944]
+2026-05-08 20:19:41.832 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-08 20:19:41.832 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-08 20:19:48.347 | INFO     | app.main:log_requests:28 - Method: GET Path: /docs Status: 200 Duration: 1.33ms
+2026-05-08 20:19:48.348 | INFO     | logging:callHandlers:1737 - 127.0.0.1:44642 - "GET /docs HTTP/1.1" 200
+2026-05-08 20:19:50.091 | INFO     | app.main:log_requests:28 - Method: GET Path: /openapi.json Status: 200 Duration: 166.15ms
+2026-05-08 20:19:50.092 | INFO     | logging:callHandlers:1737 - 127.0.0.1:44642 - "GET /openapi.json HTTP/1.1" 200
+2026-05-08 20:19:56.979 | INFO     | app.main:log_requests:28 - Method: GET Path: / Status: 200 Duration: 2.58ms
+2026-05-08 20:19:56.980 | INFO     | logging:callHandlers:1737 - 127.0.0.1:44648 - "GET / HTTP/1.1" 200
+2026-05-08 20:19:57.057 | INFO     | app.main:log_requests:28 - Method: GET Path: /favicon.ico Status: 404 Duration: 0.80ms
+2026-05-08 20:19:57.060 | INFO     | logging:callHandlers:1737 - 127.0.0.1:44648 - "GET /favicon.ico HTTP/1.1" 404
+2026-05-08 20:20:03.700 | INFO     | app.main:log_requests:28 - Method: GET Path: /docs Status: 200 Duration: 0.56ms
+2026-05-08 20:20:03.701 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39194 - "GET /docs HTTP/1.1" 200
+2026-05-08 20:20:04.131 | INFO     | app.main:log_requests:28 - Method: GET Path: /openapi.json Status: 200 Duration: 1.82ms
+2026-05-08 20:20:04.132 | INFO     | logging:callHandlers:1737 - 127.0.0.1:39194 - "GET /openapi.json HTTP/1.1" 200
+2026-05-09 19:18:11.049 | INFO     | logging:callHandlers:1737 - Started server process [10700]
+2026-05-09 19:18:11.050 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-09 19:18:11.051 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-09 19:20:08.398 | INFO     | logging:callHandlers:1737 - Started server process [10984]
+2026-05-09 19:20:08.399 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-05-09 19:20:08.399 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-05-09 19:20:15.415 | INFO     | app.main:log_requests:28 - Method: GET Path: / Status: 200 Duration: 2.80ms
+2026-05-09 19:20:15.416 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53444 - "GET / HTTP/1.1" 200
+2026-05-09 19:20:15.493 | INFO     | app.main:log_requests:28 - Method: GET Path: /favicon.ico Status: 404 Duration: 0.89ms
+2026-05-09 19:20:15.494 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53444 - "GET /favicon.ico HTTP/1.1" 404
+2026-05-09 19:20:26.180 | INFO     | app.main:log_requests:28 - Method: GET Path: /docs Status: 200 Duration: 0.59ms
+2026-05-09 19:20:26.182 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53452 - "GET /docs HTTP/1.1" 200
+2026-05-09 19:20:27.836 | INFO     | app.main:log_requests:28 - Method: GET Path: /openapi.json Status: 200 Duration: 154.53ms
+2026-05-09 19:20:27.837 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53452 - "GET /openapi.json HTTP/1.1" 200
+2026-05-09 20:19:05.741 | INFO     | app.main:log_requests:28 - Method: GET Path: / Status: 200 Duration: 43.12ms
+2026-05-09 20:19:05.758 | INFO     | logging:callHandlers:1737 - 127.0.0.1:38138 - "GET / HTTP/1.1" 200
+2026-05-09 20:19:05.819 | INFO     | app.main:log_requests:28 - Method: GET Path: /favicon.ico Status: 404 Duration: 9.93ms
+2026-05-09 20:19:05.820 | INFO     | logging:callHandlers:1737 - 127.0.0.1:38138 - "GET /favicon.ico HTTP/1.1" 404
+2026-05-09 20:24:54.033 | INFO     | app.main:log_requests:28 - Method: GET Path: / Status: 200 Duration: 1.15ms
+2026-05-09 20:24:54.034 | INFO     | logging:callHandlers:1737 - 127.0.0.1:59194 - "GET / HTTP/1.1" 200
+2026-05-09 20:25:00.852 | INFO     | app.main:log_requests:28 - Method: GET Path: /docs Status: 200 Duration: 2.09ms
+2026-05-09 20:25:00.852 | INFO     | logging:callHandlers:1737 - 127.0.0.1:59198 - "GET /docs HTTP/1.1" 200
+2026-05-09 20:25:00.978 | INFO     | app.main:log_requests:28 - Method: GET Path: /openapi.json Status: 200 Duration: 14.19ms
+2026-05-09 20:25:00.978 | INFO     | logging:callHandlers:1737 - 127.0.0.1:59198 - "GET /openapi.json HTTP/1.1" 200
+2026-05-09 20:35:15.720 | INFO     | app.main:log_requests:28 - Method: POST Path: /users/register Status: 200 Duration: 730.15ms
+2026-05-09 20:35:15.721 | INFO     | logging:callHandlers:1737 - 127.0.0.1:36252 - "POST /users/register HTTP/1.1" 200
+2026-05-09 20:36:05.192 | INFO     | app.main:log_requests:28 - Method: POST Path: /semester/setup Status: 401 Duration: 6.22ms
+2026-05-09 20:36:05.193 | INFO     | logging:callHandlers:1737 - 127.0.0.1:44568 - "POST /semester/setup HTTP/1.1" 401
+2026-05-09 20:36:20.615 | INFO     | app.main:log_requests:28 - Method: GET Path: /budget/burn-rate Status: 401 Duration: 2.57ms
+2026-05-09 20:36:20.615 | INFO     | logging:callHandlers:1737 - 127.0.0.1:41678 - "GET /budget/burn-rate HTTP/1.1" 401
+2026-05-09 20:37:06.691 | INFO     | app.main:log_requests:28 - Method: GET Path: /semester/status Status: 401 Duration: 1.60ms
+2026-05-09 20:37:06.691 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56048 - "GET /semester/status HTTP/1.1" 401
+2026-05-09 20:37:09.662 | INFO     | app.main:log_requests:28 - Method: GET Path: /semester/status Status: 401 Duration: 0.69ms
+2026-05-09 20:37:09.662 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56048 - "GET /semester/status HTTP/1.1" 401
+2026-05-09 20:37:35.339 | INFO     | app.main:log_requests:28 - Method: POST Path: /semester/setup Status: 401 Duration: 6.21ms
+2026-05-09 20:37:35.339 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60820 - "POST /semester/setup HTTP/1.1" 401

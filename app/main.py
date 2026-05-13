@@ -4,6 +4,7 @@ from app.core.settings import settings
 from app.shared.exceptions import AppException, app_exception_handler
 from app.core.logging_config import setup_logging
 from app.core.rate_limiter import init_rate_limiting
+from app.core import models # Ensure all models are registered
 import time
 
 # Initialize logging
